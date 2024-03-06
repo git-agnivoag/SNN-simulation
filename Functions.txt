@@ -1,0 +1,84 @@
+1. `lif_with_threshold(U, I, Vth, time_step=time_step, R=R, C=C)`: 
+   - Description: Implements the Leaky Integrate-and-Fire (LIF) neuron model with a threshold.
+   - Parameters:
+     - `U`: Membrane potential.
+     - `I`: Input current.
+     - `Vth`: Threshold potential.
+     - `time_step`: Time step (default value assumed).
+     - `R`: Resistance.
+     - `C`: Capacitance.
+   - Returns: Updated membrane potential (`U`) and a spike indicator (`spk`).
+
+2. `generate_U_spike(U)`: 
+   - Description: Generates a spike waveform with a given membrane potential.
+   - Parameters:
+     - `U`: Membrane potential.
+   - Returns: Spike waveform.
+
+3. `generate_pulse()`: 
+   - Description: Generates a pulse waveform.
+   - Returns: Pulse waveform.
+
+4. `spk_with_threshold(U, I, Vth, time_step=time_step, R=R, C=C)`: 
+   - Description: Implements a neuron model with a threshold and generates a spike waveform if the threshold is surpassed.
+   - Parameters: 
+     - `U`: Membrane potential.
+     - `I`: Input current.
+     - `Vth`: Threshold potential.
+     - `time_step`: Time step (default value assumed).
+     - `R`: Resistance.
+     - `C`: Capacitance.
+   - Returns: Updated membrane potential (`U`) and a spike indicator (`spk`)
+5. `memplot_phases(mem, pot, spk_rec, title)`: 
+   - Description: Plots membrane potential phases, membrane potential, and output spikes.
+   - Parameters:
+     - `mem`: Membrane potential.
+     - `pot`: Membrane potential.
+     - `spk_rec`: Recorded output spikes.
+     - `title`: Title of the plot.
+   - Returns: None.
+
+6. `memplot(mem, max, title)`: 
+   - Description: Plots membrane potential over time.
+   - Parameters:
+     - `mem`: Membrane potential.
+     - `max`: Maximum action potential.
+     - `title`: Title of the plot.
+   - Returns: None.
+
+7.- `spike_train(vol_in, q, r, rs)`: 
+  - Description: Generates a synaptic current based on input voltage and random parameters.
+  - Parameters:
+    - `vol_in`: Input voltage array.
+    - `q`: Upper bound for the range of random values in Q.
+    - `r`: Upper bound for the range of random values in R.
+    - `rs`: Constant value Rs.
+  - Returns: Synaptic current array `ipsp`.
+
+8. `simulate_neurons(potin, no)`: 
+   - Description: Simulates the behavior of neurons based on input potentials and parameters. It generates membrane potentials, spikes, and plots the membrane potential with action potential for each neuron in different layers.
+   - Parameters:
+     - `potin`: Initial input potential.
+     - `no`: List containing the number of neurons in each layer.
+   - Returns: None.
+
+9. `spk_neurons(potin, no)`: 
+   - Description: Simulates the behavior of neurons based on input potentials and parameters. It generates membrane potentials and spikes for each neuron in different layers and returns the spike records.
+   - Parameters:
+     - `potin`: Initial input potential.
+     - `no`: List containing the number of neurons in each layer.
+   - Returns: Spike records for each neuron in each layer.
+
+10. `display_total_spikes(spk, no)`: 
+   - Description: Displays the total number of spikes for each neuron in each layer.
+   - Parameters:
+     - `spk`: Spike records for each neuron in each layer.
+     - `no`: List containing the number of neurons in each layer.
+   - Returns: None.
+
+11. `stem_plot_layer_spikes(spk, layer_no)`: 
+   - Description: Plots the spikes for each neuron in a specified layer using a stem plot.
+   - Parameters:
+     - `spk`: Spike records for each neuron in each layer.
+     - `layer_no`: The number of the layer to plot spikes for.
+   - Returns: None.
