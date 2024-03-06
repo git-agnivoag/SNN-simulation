@@ -8,3 +8,7 @@
    relevance.
 
 4. Created functions for generating and visualizing custom made FFW SNN.
+
+5. Noise study for rate encoded spike trains using AWGN.
+
+More about the functions in details can be found in Functions.txt.
